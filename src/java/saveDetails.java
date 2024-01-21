@@ -41,7 +41,7 @@ public class saveDetails extends HttpServlet {
             String f_aadhar = request.getParameter("female-aadhaar-no");
             
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/adoption","root","1998");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/adoption","root","");
             String sql = "insert into registration_details(m_name,m_dob,m_nationality,m_income,m_aadhar,f_name,f_dob,f_nationality,f_income,f_aadhar,userid,childid) values('" + m_name + "',' " + m_dob + "',' " + m_nationality + "',' "+m_income+"','"+m_aadhar+"','"+f_name+"','"+f_dob+"','"+f_nationality+"','"+f_income+"','"+f_aadhar+"',"+userid+","+childid+");";
             stmt = con.createStatement();
             

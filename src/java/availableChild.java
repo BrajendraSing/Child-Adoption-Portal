@@ -28,7 +28,7 @@ public class availableChild extends HttpServlet {
         HttpSession session = request.getSession();
          try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/adoption","root","1998");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/adoption","root","");
             stmt = con.createStatement();
             String sql = "select * from available_child;";
 

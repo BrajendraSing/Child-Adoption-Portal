@@ -23,7 +23,7 @@ public class processLogin extends HttpServlet {
         if(!email.trim().isEmpty() && !password.trim().isEmpty()){
            try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/adoption","root","1998");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/adoption","root","");
                 stmt = con.createStatement();
                 String sql = "select * from user where email = '" + email + "' and password = '" + password + "';";
                 out.println(sql);
